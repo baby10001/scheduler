@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 #Autor Salem Yousef Alfauri (salfauri)
 
+#please read below comments :
 
 import re 
 import sys 
 import os 
-first_command = "show version | cut -c 1-10 | egrep -n '[a-z]'| sed '1d' | sed '/^$/d' | wc -l >> /tmp/first_command222222222222.txt"
 
-second_command = 'zsh -i -c "fabric 101 show interface counters errors >> /tmp/errors-by-infinite-recursion.txt"'
+#put command to be run at specific time "here"  
+command = "here"
+
+
 #change the variable hour1 to match you specific hour 
 hour1 = '14' 
 #change the variable min1 to match you specific mins 
@@ -49,8 +52,8 @@ def is_it_time():
 
         if (min.strip() == min1.strip() and hour.strip() == hour1.strip() and sec =="00") or (min.strip() == min2.strip() and hour.strip() == hour2.strip() and sec =="00"):
             print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-            os.system('date >> errors-by-infinite-recursion.txt')
-            os.system(second_command)
+            #os.system('date >> errors-by-infinite-recursion.txt')
+            os.system(command)
             is_it_time()
 
 
