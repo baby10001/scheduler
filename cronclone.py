@@ -50,7 +50,7 @@ def is_it_time():
         print("==========================================================")
    
 
-        if (min.strip() == min1.strip() and hour.strip() == hour1.strip() and sec =="00") or (min.strip() == min2.strip() and hour.strip() == hour2.strip() and sec =="00"):
+        if (min.strip() == min1.strip() and hour.strip() == hour1.strip() and sec =="00"):
             print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
             #os.system('date >> errors-by-infinite-recursion.txt')
             os.system(command)
